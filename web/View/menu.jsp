@@ -13,15 +13,15 @@ HttpSession s= request.getSession();
        <div class="nav-collapse collapse navbar-inverse-collapse">
            <ul class="nav">                      
              <li class="dropdown">
-               <a href="/AppTesisMatricula/View/asignatura/index.jsp" class="dropdown-toggle" >Asignatura </a>
+               <a href="/AppSqlN/View/asignatura/index.jsp" class="dropdown-toggle" >Asignatura </a>
                <!-- <ul class="dropdown-menu">
                  <li><a href="registrar/">Registrar</a></li>
                  <li><a href="prestamo.jsp">Prestamo</a></li>
                  <li><a href="devueltos.jsp">Devueltos</a></li>                          
                </ul>-->
              </li>
-             <li> <a href="/AppTesisMatricula/View/estudiante/index.jsp">Estudiante </a> </li>
-             <li> <a href="/AppTesisMatricula/View/matricula/index.jsp">Generar Matricula </a> </li>
+             <li> <a href="/AppSqlN/View/estudiante/index.jsp">Estudiante </a> </li>
+             <li> <a href="/AppSqlN/View/matricula/index.jsp">Generar Matricula </a> </li>
            </ul>               
            <ul class="nav pull-right">
              <li> 
