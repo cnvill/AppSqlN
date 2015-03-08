@@ -43,8 +43,8 @@ public class BLAsignatura {
                 oAsignatura.setIdasignatura(rs.getString("idasignatura"));
                 oAsignatura.setNombre(rs.getString("nombre"));
                 oAsignatura.setCredito(rs.getInt("creditos"));
-                oAsignatura.setHoraslaboratorio(rs.getInt("horaslaboratorio"));
                 oAsignatura.setHorasteorica(rs.getInt("horasteorica"));
+                oAsignatura.setHoraslaboratorio(rs.getInt("horaslaboratorio"));                
                 oAsignatura.setCiclo(rs.getString("ciclo"));
                 oAsignatura.setEstado(rs.getInt("estado"));
                 tasignatura.add(oAsignatura);
@@ -60,16 +60,8 @@ public class BLAsignatura {
 // public static void main(String arg[]){
 //     try {
 //         BLAsignatura bl=new BLAsignatura();  
-//         TAsignatura ta= new TAsignatura();
-//         ta.setIdasignatura("123");
-//         ta.setNombre("Matematica");
-//         ta.setCredito(1);
-//         ta.setHorasteorica(4);
-//         ta.setHoraspractica(4);
-//         ta.setHoraslaboratorio(4);
-//         ta.setCiclo("3");         
-//         String res=bl.RegistrarAsignatura(ta);         
-//      System.out.println("Hello World!"+res);
+//         
+//      System.out.println("Hello World!"+bl.ListaAsignaturas().size());
 //     } catch (Exception e) {
 //      System.out.println(e.getMessage());   
 //     }
