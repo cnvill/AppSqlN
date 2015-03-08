@@ -17,9 +17,12 @@ public class Conexion {
  
  public  static void AbrirBD(){
      try {
-        String connectionUrl = "jdbc:sqlserver://localhost:1433; databaseName=bdmatricula;user=sa; password=Facil123;"; 
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
-        conexionBD=DriverManager.getConnection(connectionUrl);
+//        String connectionUrl = "jdbc:sqlserver://localhost\\sqlserver:1433; databaseName=bdmatricula;user=sa; password=Facil123;"; 
+//        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+//        conexionBD=DriverManager.getConnection(connectionUrl);
+          Class.forName("sun.jdbc.odbc.JdbcOdbcDriver").newInstance();
+         conexionBD=DriverManager.getConnection("jdbc:odbc:bdmatricula");
+        
         st=conexionBD.createStatement();
      } catch (ClassNotFoundException e) {
          System.out.println("Class "+e.getMessage());
@@ -61,16 +64,16 @@ public class Conexion {
     } 
  }
  
- public static void main(String arg[]){
-     try {
-         System.out.println("Hello World!");
-     Conexion.AbrirBD();
-     ResultSet r=Conexion.EjecutarConsulta("select * from tasignatura");
-     r.next();
-      System.out.println("Hello World!"+r.getRow());
-     } catch (SQLException e) {
-      System.out.println(e.getMessage());   
-     }
-     
- }
+// public static void main(String arg[]){
+//     try {
+//         System.out.println("Hello World!");
+//     Conexion.AbrirBD();
+//     ResultSet r=Conexion.EjecutarConsulta("select * from tasignatura");
+//     r.next();
+//      System.out.println("Hello World!"+r.getRow());
+//     } catch (SQLException e) {
+//      System.out.println(e.getMessage());   
+//     }
+//     
+// }
 }
