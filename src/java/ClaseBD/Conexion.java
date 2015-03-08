@@ -17,9 +17,9 @@ public class Conexion {
  
  public  static void AbrirBD(){
      try {
-         
-         Class.forName("com.mysql.jdbc.Driver").newInstance();
-        conexionBD=DriverManager.getConnection("jdbc:mysql://localhost/bdmatricula","root","");
+        String connectionUrl = "jdbc:sqlserver://localhost:1433; databaseName=bdmatricula;user=sa; password=Facil123;"; 
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+        conexionBD=DriverManager.getConnection(connectionUrl);
         st=conexionBD.createStatement();
      } catch (ClassNotFoundException e) {
          System.out.println("Class "+e.getMessage());
@@ -61,16 +61,16 @@ public class Conexion {
     } 
  }
  
-// public static void main(String arg[]){
-//     try {
-//         System.out.println("Hello World!");
-//     Conexion.AbrirBD();
-//     ResultSet r=Conexion.EjecutarConsulta("select * from tasignatura");
-//     r.next();
-//      System.out.println("Hello World!"+r.getRow());
-//     } catch (SQLException e) {
-//      System.out.println(e.getMessage());   
-//     }
-//     
-// }
+ public static void main(String arg[]){
+     try {
+         System.out.println("Hello World!");
+     Conexion.AbrirBD();
+     ResultSet r=Conexion.EjecutarConsulta("select * from tasignatura");
+     r.next();
+      System.out.println("Hello World!"+r.getRow());
+     } catch (SQLException e) {
+      System.out.println(e.getMessage());   
+     }
+     
+ }
 }

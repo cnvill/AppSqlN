@@ -96,7 +96,7 @@ public class BLEstudiante {
         try {
             Conexion.AbrirBD();
             String consulta="INSERT INTO  testudiante ( codigo ,  nombre ,  apellidos , dni, fechanacimiento ,  estado ) VALUES"
-                    + " ( '"+oEstudiante.getCodigo()+"','"+oEstudiante.getNombre()+"', '"+oEstudiante.getApellidos()+"', '"+oEstudiante.getDni()+"', now(), "+oEstudiante.getEstado()+")";
+                    + " ( '"+oEstudiante.getCodigo()+"','"+oEstudiante.getNombre()+"', '"+oEstudiante.getApellidos()+"', '"+oEstudiante.getDni()+"', getdate(), "+oEstudiante.getEstado()+")";
             if(Conexion.Ejecutar(consulta)==1)
                 Res="OK";
             Conexion.CerradBD();

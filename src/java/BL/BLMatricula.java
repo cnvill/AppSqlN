@@ -62,7 +62,7 @@ public class BLMatricula {
         try {
             Conexion.AbrirBD();
             String consulta="INSERT INTO  tmatricula ( semestre ,  idestudiante ,  totalcredito ,  fechamtricula ,  estado )"
-                    + "VALUES ('"+ oMatricula.getSemestre()+"' ,"+ oMatricula.getIdestudiante()+" ,"+oMatricula.getTotalcreditos()+ ", now(), 1)";
+                    + "VALUES ('"+ oMatricula.getSemestre()+"' ,"+ oMatricula.getIdestudiante()+" ,"+oMatricula.getTotalcreditos()+ ", getdate(), 1)";
             if(Conexion.Ejecutar(consulta)==1)
                 resp="OK";
             Conexion.CerradBD();
