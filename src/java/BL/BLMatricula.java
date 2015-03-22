@@ -50,8 +50,8 @@ public class BLMatricula {
                     oDetMatricula.setCredito(listaAsignaturas.get(j).getCredito());
                     BLDetMatricula.RegistrarDetMatricula(oDetMatricula);
                     totalCredito=totalCredito+listaAsignaturas.get(j).getCredito();
-                    ActualizaCreditoMatricula(idMatricula, totalCredito);
                 }
+                ActualizaCreditoMatricula(idMatricula, totalCredito);
             }
             
         
