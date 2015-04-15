@@ -8,7 +8,6 @@
 <%@page import="BL.BLEstudiante"%>
 <%@page import="java.util.Date"%>
 <%@page import="Entidades.TEstudiante"%>
-<%@page import="org.apache.catalina.Server"%>
 <%@page import="Entidades.TAsignatura"%>
 <%@page import="BL.BLAsignatura"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -76,7 +75,7 @@
                 </div>
                 <div class="row-fluid">
                     <label for="txtFechaNacimiento">Fecha Nacimiento:</label>
-                    <input type="dae" name="txtFechaNacimiento"  value="<%=oEstudiate.getFechanacimiento()%>" placeholder="Igrese Fecha Nacimiento"  style="height: 30px;" class="input-xlarge" required>
+                    <input type="date" name="txtFechaNacimiento"  value="<%=oEstudiate.getFechanacimiento()%>" placeholder="Igrese Fecha Nacimiento"  style="height: 30px;" class="input-xlarge" required>
                 </div>
                 <div class="row-fluid">
                     <label for="cbestado">Estado:</label>

@@ -32,7 +32,7 @@ public class BLEstudiante {
                 oEstudiante.setNombre(rs.getString("nombre"));
                 oEstudiante.setApellidos(rs.getString("apellidos"));
                 oEstudiante.setFechanacimiento(rs.getDate("fechanacimiento").toString());
-                oEstudiante.setDni(rs.getString("dni"));
+                oEstudiante.setDni(""+rs.getString("dni"));
                 oEstudiante.setEstado(rs.getInt("Estado"));
             }
             Conexion.CerradBD();
@@ -54,6 +54,7 @@ public class BLEstudiante {
                 oEstudiante.setCodigo(rs.getString("codigo"));
                 oEstudiante.setNombre(rs.getString("nombre"));
                 oEstudiante.setApellidos(rs.getString("apellidos"));
+                oEstudiante.setFechanacimiento(rs.getDate("fechanacimiento").toString());
                 oEstudiante.setDni(rs.getString("dni"));
                 oEstudiante.setEstado(rs.getInt("Estado"));
                 testudiante.add(oEstudiante);
