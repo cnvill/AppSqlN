@@ -26,6 +26,7 @@
        <jsp:include page="/View/menu.jsp"></jsp:include>
        <%
          Boolean r=(request.getParameter("txtcodigo")!="" && request.getParameter("txtcodigo")!=null); 
+          java.util.Date dateInicio = new java.util.Date();
          if(r){
              TEstudiante oEstudiante= new TEstudiante();
              oEstudiante.setIdestudiante(Integer.parseInt(request.getParameter("txtIdEstudiante").toString()));
@@ -33,11 +34,14 @@
              oEstudiante.setNombre(request.getParameter("txtnombre"));             
              oEstudiante.setApellidos(request.getParameter("txtapellidos"));
              oEstudiante.setDni(request.getParameter("txtdni"));
+             oEstudiante.setFechanacimiento(request.getParameter("txtFechaNacimiento"));
              oEstudiante.setEstado(Integer.parseInt(request.getParameter("cbestado")));
              String resp=BLEstudiante.ActualizarEstudiante(oEstudiante);
             if(resp=="OK")
             {  HttpSession s= request.getSession();
-                    s.setAttribute("respuesta_registro", "Registro satisfactorio");
+                   java.util.Date dateFin = new java.util.Date();
+                    String tiempo=String.valueOf((dateFin.getTime()-dateInicio.getTime()));
+                    s.setAttribute("respuesta_registro", "Tiempo transcurrido en Editar: "+tiempo+" Milisegundos");
                     response.sendRedirect("index.jsp");
             }else
             {

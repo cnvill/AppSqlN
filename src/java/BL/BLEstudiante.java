@@ -125,4 +125,15 @@ public class BLEstudiante {
         }
         return Res;
     }
+     
+      public static void main(String arg[]){
+     try {
+         
+     TEstudiante o=    BLEstudiante.GetEstudiante("147");
+      System.out.println(o.getFechanacimiento());      
+      
+     } catch (Exception e) {
+      System.out.println(e.getMessage());   
+     }
+ }
 }
